@@ -1,0 +1,835 @@
+module_name: UAM_OBS
+parameters:
+  - group: UAM_OBS
+    definitions:
+      X_E1:
+        description:
+          short: Observer parameter E1 for X state.
+          long: |
+            Defines the observer parameter E1 for the estimated X state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 16.0
+
+      X_E2:
+        description:
+          short: Observer parameter E2 for X state.
+          long: |
+            Defines the observer parameter E2 for the estimated X state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 60.0
+
+      X_E3:
+        description:
+          short: Observer parameter E3 for X state.
+          long: |
+            Defines the observer parameter E3 for the estimated X state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 100.0
+
+      X_E4:
+        description:
+          short: Observer parameter E4 for X state.
+          long: |
+            Defines the observer parameter E4 for the estimated X state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 0.01
+
+      X_MU1:
+        description:
+          short: Observer parameter MU1 for X state.
+          long: |
+            Defines the observer gain MU1 for the estimated X state, ensuring stability and performance.
+            MU1 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 16.0
+
+      X_MU2:
+        description:
+          short: Observer parameter MU2 for X state.
+          long: |
+            Defines the observer gain MU2 for the estimated X state, influencing system response.
+            MU2 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 60.0
+
+      X_MU3:
+        description:
+          short: Observer parameter MU3 for X state.
+          long: |
+            Defines the observer gain MU3 for the estimated X state, affecting dynamic performance.
+            MU3 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 100.0
+
+      X_ALPHA:
+        description:
+          short: Observer parameter ALPHA for X state.
+          long: |
+            Defines the lambda parameter for the observer, influencing the convergence rate.
+            ALPHA helps to manage the convergence time and the noise sensitivity.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 0.6
+
+      X_BETA:
+        description:
+          short: Observer parameter BETA for X state.
+          long: |
+            Defines the BETA parameter for robustness against disturbances in the X state.
+            BETA influences the transitory of the estimation error.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 1.2
+
+      Y_E1:
+        description:
+          short: Observer parameter E1 for Y state.
+          long: |
+            Defines the observer parameter E1 for the estimated Y state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 16.0
+
+      Y_E2:
+        description:
+          short: Observer parameter E2 for Y state.
+          long: |
+            Defines the observer parameter E2 for the estimated Y state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 60.0
+
+      Y_E3:
+        description:
+          short: Observer parameter E3 for Y state.
+          long: |
+            Defines the observer parameter E3 for the estimated Y state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 100.0
+
+      Y_E4:
+        description:
+          short: Observer parameter E4 for Y state.
+          long: |
+            Defines the observer parameter E4 for the estimated Y state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 0.01
+
+      Y_MU1:
+        description:
+          short: Observer parameter MU1 for Y state.
+          long: |
+            Defines the observer gain MU1 for the estimated Y state, ensuring stability and performance.
+            MU1 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 16.0
+
+      Y_MU2:
+        description:
+          short: Observer parameter MU2 for Y state.
+          long: |
+            Defines the observer gain MU2 for the estimated Y state, influencing system response.
+            MU2 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 60.0
+
+      Y_MU3:
+        description:
+          short: Observer parameter MU3 for Y state.
+          long: |
+            Defines the observer gain MU3 for the estimated Y state, affecting dynamic performance.
+            MU3 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 100.0
+
+      Y_ALPHA:
+        description:
+          short: Observer parameter ALPHA for Y state.
+          long: |
+            Defines the lambda parameter for the observer, influencing the convergence rate.
+            ALPHA helps to manage the convergence time and the noise sensitivity.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 0.6
+
+      Y_BETA:
+        description:
+          short: Observer parameter BETA for Y state.
+          long: |
+            Defines the BETA parameter for robustness against disturbances in the Y state.
+            BETA influences the transitory of the estimation error.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 1.2
+
+      Z_E1:
+        description:
+          short: Observer parameter E1 for Z state.
+          long: |
+            Defines the observer parameter E1 for the estimated Z state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 16.0
+
+      Z_E2:
+        description:
+          short: Observer parameter E2 for Z state.
+          long: |
+            Defines the observer parameter E2 for the estimated Z state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 60.0
+
+      Z_E3:
+        description:
+          short: Observer parameter E3 for Z state.
+          long: |
+            Defines the observer parameter E3 for the estimated Z state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 100.0
+
+      Z_E4:
+        description:
+          short: Observer parameter E4 for Z state.
+          long: |
+            Defines the observer parameter E4 for the estimated Z state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 0.01
+
+      Z_MU1:
+        description:
+          short: Observer parameter MU1 for Z state.
+          long: |
+            Defines the observer gain MU1 for the estimated Z state, ensuring stability and performance.
+            MU1 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 16.0
+
+      Z_MU2:
+        description:
+          short: Observer parameter MU2 for Z state.
+          long: |
+            Defines the observer gain MU2 for the estimated Z state, influencing system response.
+            MU2 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 60.0
+
+      Z_MU3:
+        description:
+          short: Observer parameter MU3 for Z state.
+          long: |
+            Defines the observer gain MU3 for the estimated Z state, affecting dynamic performance.
+            MU3 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 100.0
+
+      Z_ALPHA:
+        description:
+          short: Observer parameter ALPHA for Z state.
+          long: |
+            Defines the lambda parameter for the observer, influencing the convergence rate.
+            ALPHA helps to manage the convergence time and the noise sensitivity.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 0.6
+
+      Z_BETA:
+        description:
+          short: Observer parameter BETA for Z state.
+          long: |
+            Defines the BETA parameter for robustness against disturbances in the Z state.
+            BETA influences the transitory of the estimation error.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 1.2
+
+      ROLL_E1:
+        description:
+          short: Observer parameter E1 for ROLL state.
+          long: |
+            Defines the observer parameter E1 for the estimated ROLL state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 16.0
+
+      ROLL_E2:
+        description:
+          short: Observer parameter E2 for ROLL state.
+          long: |
+            Defines the observer parameter E2 for the estimated ROLL state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 150.0
+
+      ROLL_E3:
+        description:
+          short: Observer parameter E3 for ROLL state.
+          long: |
+            Defines the observer parameter E3 for the estimated ROLL state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 450.0
+
+      ROLL_E4:
+        description:
+          short: Observer parameter E4 for ROLL state.
+          long: |
+            Defines the observer parameter E4 for the estimated ROLL state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 0.01
+
+      ROLL_MU1:
+        description:
+          short: Observer parameter MU1 for ROLL state.
+          long: |
+            Defines the observer gain MU1 for the estimated ROLL state, ensuring stability and performance.
+            MU1 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 16.0
+
+      ROLL_MU2:
+        description:
+          short: Observer parameter MU2 for ROLL state.
+          long: |
+            Defines the observer gain MU2 for the estimated ROLL state, influencing system response.
+            MU2 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 150.0
+
+      ROLL_MU3:
+        description:
+          short: Observer parameter MU3 for ROLL state.
+          long: |
+            Defines the observer gain MU3 for the estimated ROLL state, affecting dynamic performance.
+            MU3 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 450.0
+
+      ROLL_ALPHA:
+        description:
+          short: Observer parameter ALPHA for ROLL state.
+          long: |
+            Defines the lambda parameter for the observer, influencing the convergence rate.
+            ALPHA helps to manage the convergence time and the noise sensitivity.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 0.6
+
+      ROLL_BETA:
+        description:
+          short: Observer parameter BETA for ROLL state.
+          long: |
+            Defines the BETA parameter for robustness against disturbances in the ROLL state.
+            BETA influences the transitory of the estimation error.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 1.2
+
+      PITCH_E1:
+        description:
+          short: Observer parameter E1 for PITCH state.
+          long: |
+            Defines the observer parameter E1 for the estimated PITCH state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 16.0
+
+      PITCH_E2:
+        description:
+          short: Observer parameter E2 for PITCH state.
+          long: |
+            Defines the observer parameter E2 for the estimated PITCH state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 150.0
+
+      PITCH_E3:
+        description:
+          short: Observer parameter E3 for PITCH state.
+          long: |
+            Defines the observer parameter E3 for the estimated PITCH state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 450.0
+
+      PITCH_E4:
+        description:
+          short: Observer parameter E4 for PITCH state.
+          long: |
+            Defines the observer parameter E4 for the estimated PITCH state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 0.01
+
+      PITCH_MU1:
+        description:
+          short: Observer parameter MU1 for PITCH state.
+          long: |
+            Defines the observer gain MU1 for the estimated PITCH state, ensuring stability and performance.
+            MU1 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 16.0
+
+      PITCH_MU2:
+        description:
+          short: Observer parameter MU2 for PITCH state.
+          long: |
+            Defines the observer gain MU2 for the estimated PITCH state, influencing system response.
+            MU2 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 150.0
+
+      PITCH_MU3:
+        description:
+          short: Observer parameter MU3 for PITCH state.
+          long: |
+            Defines the observer gain MU3 for the estimated PITCH state, affecting dynamic performance.
+            MU3 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 450.0
+
+      PITCH_ALPHA:
+        description:
+          short: Observer parameter ALPHA for PITCH state.
+          long: |
+            Defines the lambda parameter for the observer, influencing the convergence rate.
+            ALPHA helps to manage the convergence time and the noise sensitivity.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 0.6
+
+      PITCH_BETA:
+        description:
+          short: Observer parameter BETA for PITCH state.
+          long: |
+            Defines the BETA parameter for robustness against disturbances in the PITCH state.
+            BETA influences the transitory of the estimation error.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 1.2
+
+      YAW_E1:
+        description:
+          short: Observer parameter E1 for YAW state.
+          long: |
+            Defines the observer parameter E1 for the estimated YAW state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 16.0
+
+      YAW_E2:
+        description:
+          short: Observer parameter E2 for YAW state.
+          long: |
+            Defines the observer parameter E2 for the estimated YAW state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 150.0
+
+      YAW_E3:
+        description:
+          short: Observer parameter E3 for YAW state.
+          long: |
+            Defines the observer parameter E3 for the estimated YAW state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 450.0
+
+      YAW_E4:
+        description:
+          short: Observer parameter E4 for YAW state.
+          long: |
+            Defines the observer parameter E4 for the estimated YAW state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 0.01
+
+      YAW_MU1:
+        description:
+          short: Observer parameter MU1 for YAW state.
+          long: |
+            Defines the observer gain MU1 for the estimated YAW state, ensuring stability and performance.
+            MU1 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 16.0
+
+      YAW_MU2:
+        description:
+          short: Observer parameter MU2 for YAW state.
+          long: |
+            Defines the observer gain MU2 for the estimated YAW state, influencing system response.
+            MU2 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 150.0
+
+      YAW_MU3:
+        description:
+          short: Observer parameter MU3 for YAW state.
+          long: |
+            Defines the observer gain MU3 for the estimated YAW state, affecting dynamic performance.
+            MU3 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 450.0
+
+      YAW_ALPHA:
+        description:
+          short: Observer parameter ALPHA for YAW state.
+          long: |
+            Defines the lambda parameter for the observer, influencing the convergence rate.
+            ALPHA helps to manage the convergence time and the noise sensitivity.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 0.6
+
+      YAW_BETA:
+        description:
+          short: Observer parameter BETA for YAW state.
+          long: |
+            Defines the BETA parameter for robustness against disturbances in the YAW state.
+            BETA influences the transitory of the estimation error.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 1.2
+
+      L_ONE_E1:
+        description:
+          short: Observer parameter E1 for L_ONE state.
+          long: |
+            Defines the observer parameter E1 for the estimated L_ONE state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 50.0
+
+      L_ONE_E2:
+        description:
+          short: Observer parameter E2 for L_ONE state.
+          long: |
+            Defines the observer parameter E2 for the estimated L_ONE state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 1000.0
+
+      L_ONE_E3:
+        description:
+          short: Observer parameter E3 for L_ONE state.
+          long: |
+            Defines the observer parameter E3 for the estimated L_ONE state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 5000.0
+
+      L_ONE_E4:
+        description:
+          short: Observer parameter E4 for L_ONE state.
+          long: |
+            Defines the observer parameter E4 for the estimated L_ONE state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 0.01
+
+      L_ONE_MU1:
+        description:
+          short: Observer parameter MU1 for L_ONE state.
+          long: |
+            Defines the observer gain MU1 for the estimated L_ONE state, ensuring stability and performance.
+            MU1 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 50.0
+
+      L_ONE_MU2:
+        description:
+          short: Observer parameter MU2 for L_ONE state.
+          long: |
+            Defines the observer gain MU2 for the estimated L_ONE state, influencing system response.
+            MU2 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 1000.0
+
+      L_ONE_MU3:
+        description:
+          short: Observer parameter MU3 for L_ONE state.
+          long: |
+            Defines the observer gain MU3 for the estimated L_ONE state, affecting dynamic performance.
+            MU3 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 5000.0
+
+      L_ONE_ALPHA:
+        description:
+          short: Observer parameter ALPHA for L_ONE state.
+          long: |
+            Defines the lambda parameter for the observer, influencing the convergence rate.
+            ALPHA helps to manage the convergence time and the noise sensitivity.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 0.6
+
+      L_ONE_BETA:
+        description:
+          short: Observer parameter BETA for L_ONE state.
+          long: |
+            Defines the BETA parameter for robustness against disturbances in the L_ONE state.
+            BETA influences the transitory of the estimation error.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 1.2
+
+      L_TWO_E1:
+        description:
+          short: Observer parameter E1 for L_TWO state.
+          long: |
+            Defines the observer parameter E1 for the estimated L_TWO state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 50.0
+
+      L_TWO_E2:
+        description:
+          short: Observer parameter E2 for L_TWO state.
+          long: |
+            Defines the observer parameter E2 for the estimated L_TWO state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 1000.0
+
+      L_TWO_E3:
+        description:
+          short: Observer parameter E3 for L_TWO state.
+          long: |
+            Defines the observer parameter E3 for the estimated L_TWO state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 5000.0
+
+      L_TWO_E4:
+        description:
+          short: Observer parameter E4 for L_TWO state.
+          long: |
+            Defines the observer parameter E4 for the estimated L_TWO state.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 0.01
+
+      L_TWO_MU1:
+        description:
+          short: Observer parameter MU1 for L_TWO state.
+          long: |
+            Defines the observer gain MU1 for the estimated L_TWO state, ensuring stability and performance.
+            MU1 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 50.0
+
+      L_TWO_MU2:
+        description:
+          short: Observer parameter MU2 for L_TWO state.
+          long: |
+            Defines the observer gain MU2 for the estimated L_TWO state, influencing system response.
+            MU2 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 1000.0
+
+      L_TWO_MU3:
+        description:
+          short: Observer parameter MU3 for L_TWO state.
+          long: |
+            Defines the observer gain MU3 for the estimated L_TWO state, affecting dynamic performance.
+            MU3 is a tuning parameter for the estimation process.
+        type: float
+        min: 0.0
+        max: 10000.0
+        reboot_required: false
+        default: 5000.0
+
+      L_TWO_ALPHA:
+        description:
+          short: Observer parameter ALPHA for L_TWO state.
+          long: |
+            Defines the lambda parameter for the observer, influencing the convergence rate.
+            ALPHA helps to manage the convergence time and the noise sensitivity.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 0.6
+
+      L_TWO_BETA:
+        description:
+          short: Observer parameter BETA for L_TWO state.
+          long: |
+            Defines the BETA parameter for robustness against disturbances in the L_TWO state.
+            BETA influences the transitory of the estimation error.
+        type: float
+        min: 0.0
+        max: 20.0
+        reboot_required: false
+        default: 1.2

@@ -1,0 +1,356 @@
+module_name: UAM_CTRL
+parameters:
+  - group: UAM_CTRL
+    definitions:
+      UAM_X_P:
+        description:
+          short: P Gain for x-axis
+          long: |
+            P Gain for the x-axis fo the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 0.5
+      
+      UAM_X_D:
+        description:
+          short: D Gain for x-axis
+          long: |
+            D Gain for the x-axis fo the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 0.5
+        
+      UAM_Y_P:
+        description:
+          short: P Gain for y-axis
+          long: |
+            P Gain for the y-axis fo the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 0.5
+      
+      UAM_Y_D:
+        description:
+          short: D Gain for y-axis
+          long: |
+            D Gain for the y-axis fo the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 0.5
+        
+      UAM_Z_P:
+        description:
+          short: P Gain for z-axis
+          long: |
+            P Gain for the z-axis fo the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 250.0
+      
+      UAM_Z_D:
+        description:
+          short: D Gain for z-axis
+          long: |
+            D Gain for the z-axis fo the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 250.0
+
+      UAM_ROLL_P:
+        description:
+          short: P Gain for roll
+          long: |
+            P Gain for the roll of the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 2.0
+      
+      UAM_ROLL_D:
+        description:
+          short: D Gain for roll
+          long: |
+            D Gain for the roll of the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 2.0
+        
+      UAM_PITCH_P:
+        description:
+          short: P Gain for pitch
+          long: |
+            P Gain for the pithc of the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 2.0
+      
+      UAM_PITCH_D:
+        description:
+          short: D Gain for pitch
+          long: |
+            D Gain for the pitch fo the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 2.0
+        
+      UAM_YAW_P:
+        description:
+          short: P Gain for yaw
+          long: |
+            P Gain for the yaw of the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 2.0
+      
+      UAM_YAW_D:
+        description:
+          short: D Gain for yaw
+          long: |
+            D Gain for the yaw of the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 2.0
+
+      UAM_L_ONE_P:
+        description:
+          short: P Gain for yaw
+          long: |
+            P Gain for the yaw of the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 20.0
+      
+      UAM_L_ONE_D:
+        description:
+          short: D Gain for yaw
+          long: |
+            D Gain for the yaw of the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 20.0
+
+      UAM_L_TWO_P:
+        description:
+          short: P Gain for yaw
+          long: |
+            P Gain for the yaw of the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 20.0
+      
+      UAM_L_TWO_D:
+        description:
+          short: D Gain for yaw
+          long: |
+            D Gain for the yaw of the UAM, based on a Nonlinear PD controller with gravity compensation.
+        type: float
+        units: ms
+        min: 0.0
+        max: 300.0
+        reboot_required: false
+        default: 20.0
+      
+      UAM_MASS:
+        description:
+          short: Mass of the vehicle
+          long: |
+            Mass of the vehicle.
+        type: float
+        units: kg
+        min: 0.1
+        max: 5.0
+        reboot_required: false
+        default: 1.8188
+
+      UAM_I_XX:
+        description:
+          short: Inertia of the vehicle over the x-axis
+          long: |
+            Inertia of the vehicle over the x-axis, based on the Solidworks design.
+        type: float
+        units: kg
+        min: 0.00
+        max: 1.00
+        reboot_required: false
+        default: 0.03937480
+        
+      UAM_I_YY:
+        description:
+          short: Inertia of the vehicle over the y-axis
+          long: |
+            Inertia of the vehicle over the y-axis, based on the Solidworks design.
+        type: float
+        units: kg
+        min: 0.00
+        max: 1.00
+        reboot_required: false
+        default: 0.04043155
+        
+      UAM_I_ZZ:
+        description:
+          short: Inertia of the vehicle over the z-axis
+          long: |
+            Inertia of the vehicle over the z-axis, based on the Solidworks design.
+        type: float
+        units: kg
+        min: 0.00
+        max: 1.00
+        reboot_required: false
+        default: 0.06214814
+
+      UAM_L_ONE_MASS:
+        description:
+          short: Mass of link one
+          long: |
+            Mass of the first link of the manipulator.
+        type: float
+        units: kg
+        min: 0.1
+        max: 5.0
+        reboot_required: false
+        default: 0.142
+
+      UAM_L_ONE_I_XX:
+        description:
+          short: Inertia of the link over the x-axis
+          long: |
+            Inertia of the link over the x-axis, based on the Solidworks design.
+        type: float
+        units: kg
+        min: 0.00
+        max: 1.00
+        reboot_required: false
+        default: 0.00005484
+        
+      UAM_L_ONE_I_YY:
+        description:
+          short: Inertia of the link over the y-axis
+          long: |
+            Inertia of the link over the y-axis, based on the Solidworks design.
+        type: float
+        units: kg
+        min: 0.00
+        max: 1.00
+        reboot_required: false
+        default: 0.00050874
+        
+      UAM_L_ONE_I_ZZ:
+        description:
+          short: Inertia of the link over the z-axis
+          long: |
+            Inertia of the link over the z-axis, based on the Solidworks design.
+        type: float
+        units: kg
+        min: 0.00
+        max: 1.00
+        reboot_required: false
+        default: 0.00046501
+
+      UAM_L_TWO_MASS:
+        description:
+          short: Mass of link 2
+          long: |
+            Mass of the second link of the manipulator.
+        type: float
+        units: kg
+        min: 0.1
+        max: 5.0
+        reboot_required: false
+        default: 0.143
+
+      UAM_L_TWO_I_XX:
+        description:
+          short: Inertia of the link over the x-axis
+          long: |
+            Inertia of the link over the x-axis, based on the Solidworks design.
+        type: float
+        units: kg
+        min: 0.00
+        max: 1.00
+        reboot_required: false
+        default: 0.00008085
+        
+      UAM_L_TWO_I_YY:
+        description:
+          short: Inertia of the link over the y-axis
+          long: |
+            Inertia of the link over the y-axis, based on the Solidworks design.
+        type: float
+        units: kg
+        min: 0.00
+        max: 1.00
+        reboot_required: false
+        default: 0.00034964
+        
+      UAM_L_TWO_I_ZZ:
+        description:
+          short: Inertia of the link over the z-axis
+          long: |
+            Inertia of the link over the z-axis, based on the Solidworks design.
+        type: float
+        units: kg
+        min: 0.00
+        max: 1.00
+        reboot_required: false
+        default: 0.00030340
+
+      TRAJ_SEL:
+        description:
+          short: Trajectory source selector
+          long: |
+            Desired trajectory selector for UAM. Options 0 - Sit still. 1 - Trajectory. 2 - Oscillate
+        type: enum
+        values:
+          0: 0
+          1: 1
+          2: 2
+          3: 3
+          4: 4
+          5: 5
+          6: 6
+          7: 7
+        default: 0

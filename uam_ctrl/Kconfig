@@ -1,0 +1,5 @@
+menuconfig MODULES_UAM_CTRL
+        bool "uam_ctrl"
+        default n
+        ---help---
+                Enable Controller Parameters for Simulink App
